@@ -1,0 +1,32 @@
+@use "../utils" as ut;
+
+html {
+   font-size: 100%;
+   box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+   padding: 0;
+   margin: 0;
+   box-sizing: inherit;
+}
+
+body {
+   width: ut.rem(375);
+   background-color: hsl(222, 26%, 31%);
+   font-size: ut.rem(32);
+   font-family: "League Spartan", sans-serif;
+   color: hsl(0, 0, 100%);
+}
+
+.light-body {
+   background-color: hsl(0, 0, 93%);
+   color: hsl(60, 10%, 19%);
+}
+
+.bright-body {
+   background-color: hsl(268, 75%, 9%);
+   color: hsl(52, 100%, 62%);
+}

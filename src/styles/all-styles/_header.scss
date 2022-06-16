@@ -1,0 +1,80 @@
+@use "../utils" as ut;
+
+.header {
+   border: thin solid orangered;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: ut.rem(50);
+   background-color: ut.$key-bg-moderated-cyan;
+
+   // title text
+   &-title {
+      font-weight: 500;
+      font-size: ut.rem(24);
+      letter-spacing: ut.rem(1);
+   }
+
+   // theme
+   &-theme {
+      border: thin solid;
+      width: 28%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   // heading 2
+   h2 {
+      font-size: ut.rem(10);
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: ut.rem(1);
+   }
+
+   &-radios {
+      display: flex;
+      width: ut.rem(50);
+      height: ut.rem(18);
+      border-radius: ut.rem(20);
+      background-color: hsl(223, 31%, 20%);
+      position: relative;
+
+      // input radio buttons
+      .radio-input {
+         display: none;
+      }
+
+      label {
+         display: block;
+         height: ut.rem(12);
+         width: ut.rem(16);
+         opacity: 0;
+         z-index: 100;
+      }
+
+      .moving-ball {
+         display: block;
+         width: ut.rem(10);
+         height: ut.rem(10);
+         position: absolute;
+         top: 0;
+         background-color: hsl(6, 63%, 50%);
+         border-radius: 50%;
+         left: ut.rem(3);
+         top: 18%;
+         transition: transform 0.2s ease-in-out;
+         margin-inline: ut.rem(1.5);
+         margin-top: ut.rem(1);
+
+         &.to-light {
+            transform: translateX(ut.rem(16));
+            // background-color: ;
+         }
+
+         &.to-bright {
+            transform: translateX(ut.rem(32));
+         }
+      }
+   }
+}
