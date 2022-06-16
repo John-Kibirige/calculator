@@ -15,18 +15,22 @@ html {
 
 body {
    width: ut.rem(375);
-   background-color: hsl(222, 26%, 31%);
    font-size: ut.rem(32);
    font-family: "League Spartan", sans-serif;
-   color: hsl(0, 0, 100%);
-}
+   padding: ut.rem(16);
 
-.light-body {
-   background-color: hsl(0, 0, 93%);
-   color: hsl(60, 10%, 19%);
-}
+   &.theme-one {
+      background-color: ut.$main-bg;
+      color: ut.$text-cl-white;
+   }
 
-.bright-body {
-   background-color: hsl(268, 75%, 9%);
-   color: hsl(52, 100%, 62%);
+   &.theme-two {
+      background-color: ut.$main-bg-gray;
+      color: ut.$dark-grayish-yellow;
+   }
+
+   &.theme-three {
+      background-color: ut.$main-bg-violet;
+      color: ut.$light-yellow;
+   }
 }

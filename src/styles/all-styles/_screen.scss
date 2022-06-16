@@ -1,0 +1,23 @@
+@use "../utils" as ut;
+
+.screen-display {
+   border: thin solid cyan;
+   padding: 1rem;
+   text-align: right;
+   margin-top: ut.rem(28);
+   border-radius: ut.rem(8);
+   background-color: ut.$screen-bg;
+
+   &.theme-two {
+      background-color: ut.$screen-bg-gray;
+   }
+
+   &.theme-three {
+      background-color: ut.$toggle-keypad-screen-bg;
+   }
+
+   h1 {
+      font-size: ut.rem(33);
+      font-weight: 600;
+   }
+}

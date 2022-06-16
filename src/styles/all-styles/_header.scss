@@ -6,39 +6,60 @@
    justify-content: space-between;
    align-items: center;
    margin-top: ut.rem(50);
-   background-color: ut.$key-bg-moderated-cyan;
+   position: relative;
+
+   &-theme-label {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: ut.rem(68);
+      padding-inline: ut.rem(8);
+      display: flex;
+      justify-content: space-between;
+   }
 
    // title text
    &-title {
       font-weight: 500;
-      font-size: ut.rem(24);
+      font-size: ut.rem(36);
       letter-spacing: ut.rem(1);
    }
 
    // theme
    &-theme {
       border: thin solid;
-      width: 28%;
+      width: 40.5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-top: ut.rem(18);
    }
 
    // heading 2
    h2 {
-      font-size: ut.rem(10);
+      font-size: ut.rem(14);
       text-transform: uppercase;
-      font-weight: 400;
+      font-weight: 500;
       letter-spacing: ut.rem(1);
    }
 
    &-radios {
       display: flex;
-      width: ut.rem(50);
-      height: ut.rem(18);
+      width: ut.rem(68);
+      height: ut.rem(26);
       border-radius: ut.rem(20);
       background-color: hsl(223, 31%, 20%);
       position: relative;
+      padding-left: ut.rem(2);
+      padding-top: ut.rem(2.6);
+
+      &.theme-two {
+         background-color: ut.$toggle-keypad-bg-red;
+      }
+
+      &.theme-three {
+         background-color: ut.$toggle-keypad-screen-bg;
+      }
 
       // input radio buttons
       .radio-input {
@@ -47,33 +68,42 @@
 
       label {
          display: block;
-         height: ut.rem(12);
-         width: ut.rem(16);
+         height: ut.rem(20);
+         width: ut.rem(18);
          opacity: 0;
          z-index: 100;
+         margin-left: ut.rem(3);
       }
 
       .moving-ball {
          display: block;
-         width: ut.rem(10);
-         height: ut.rem(10);
+         width: ut.rem(14);
+         height: ut.rem(14);
          position: absolute;
          top: 0;
          background-color: hsl(6, 63%, 50%);
          border-radius: 50%;
          left: ut.rem(3);
          top: 18%;
-         transition: transform 0.2s ease-in-out;
+         transition: all 0.2s ease-in-out;
          margin-inline: ut.rem(1.5);
          margin-top: ut.rem(1);
 
+         &.theme-two {
+            background-color: ut.$key-bg-toggle-orange;
+         }
+
+         &.theme-three {
+            background-color: ut.$key-bg-toggle-cyan;
+         }
+
          &.to-light {
-            transform: translateX(ut.rem(16));
+            transform: translateX(ut.rem(23));
             // background-color: ;
          }
 
          &.to-bright {
-            transform: translateX(ut.rem(32));
+            transform: translateX(ut.rem(45));
          }
       }
    }
